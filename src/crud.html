@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lista de Filmes do Calovi</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="bootstrap/css/prettify.css" rel="stylesheet">
+		<link href="css/flat-ui.css" rel="stylesheet">
+		<link href="css/default.css" rel="stylesheet">
+		<link href="css/fancybox.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container" id="movieEdit">
+			<br>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Nome do Filme" maxlength="" />
+						<span class="input-icon fui-check"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-6">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Pais do filme" maxlength="" />
+						<span class="input-icon fui-calendar-solid"></span>
+					</div>
+					<div class="form-group">
+						<select class="form-control" >
+							<option >Selecione Genêro do filme</option>
+							<option >+++ Incluir novo genêro</option>
+						</select>
+						<span class="input-icon fui-video"></span>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Data de vizualização" maxlength="" />
+						<span class="input-icon fui-eye"></span>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Local de visualização" maxlength="" />
+						<span class="input-icon fui-location"></span>
+					</div>
+				</div>
+				<div class="col-xs-6">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Ano do filme" maxlength="" />
+						<span class="input-icon fui-time"></span>
+					</div>
+					<div class="form-group">
+						<select class="form-control" >
+							<option value="0">Selecione uma nota para o filme</option>
+							<option value="1">Nota 01</option>
+							<option value="2">Nota 02</option>
+							<option value="3">Nota 03</option>
+							<option value="4">Nota 04</option>
+							<option value="5">Nota 05</option>
+							<option value="6">Nota 06</option>
+							<option value="7">Nota 07</option>
+							<option value="8">Nota 08</option>
+							<option value="9">Nota 09</option>
+							<option value="10">Nota 10</option>
+						</select>
+						<span class="input-icon fui-heart"></span>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Com quem foi visualização" maxlength="" />
+						<span class="input-icon fui-user"></span>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Upload da imagem" maxlength="" />
+						<span class="input-icon fui-photo"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="form-group">
+						<textarea class="form-control span12" rows="3" placeholder="Comentários do Filme"></textarea>
+						<span class="input-icon fui-list"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row centered">
+				<a class="btn btn-wide btn-success"><span class="fui-check"></span> Salvar</a>
+				<a class="btn btn-wide btn-danger"><span class="fui-cross"></span> Excluir</a>
+			</div>
+		</div>
+
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-select.js"></script>
+		<script src="js/jquery.tagsinput.js"></script>
+		<script src="bootstrap/js/google-code-prettify/prettify.js"></script>
+		<script src="js/application.js"></script>
+		<script src="js/movies.js"></script>
+		<script src="js/jslinq.js"></script>
+		<script>
+			$(function($){
+				var id = window.location.search.substring(1);
+				/*
+				var movie = JSLINQ(movies).
+							Where(function(item){ return item.id == id; }).
+							Select(function(item){ return item }).items[0];
+				*/
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+body {
+	background-color: #ECF0F1;
+	color: #2C3E50;
+}
+
+hr {
+	border-top: 1px solid #95A5A6;
+}
+
+#listMovies .img-circle {
+	border-radius: 5%;
+	width: 180px; /* 214px; */
+	height: 267px; /* 317px; */
+}
+
+.centered {
+    text-align: center;
+}
+
+.movie-box {
+	height: 390px;
+}
+
+.movie-description {
+    font-size: 12px;
+    color: #7F8C8D;
+}
+
+.img-circle {
+	border-radius: 5%;
+	width: 230px;
+	height: 341px;
+}
+
+#movieDetail #movieImage {
+	float: left;
+	width: 250px;
+	height: 341px;
+}
+
+#movieDetail #movieDescription {
+	font-weight: bold;
+	border-left: 1px solid black;
+	padding-left: 20px;
+	width: 500px;
+	height: 341px;
+	float: left;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#movieDetail #movieDescription .row {
+	margin-bottom: 12px;
+}
+
+#movieName, #movieCountry, #movieYear, #movieDate, #moviePlace, #movieFellows, #movieGender, #movieRate, #movieComments {
+	color: #16a085;
+}
+
+#movieEdit select  {
+	color: #bdc3c7;
+}

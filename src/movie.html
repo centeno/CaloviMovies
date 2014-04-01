@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lista de Filmes do Calovi</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="bootstrap/css/prettify.css" rel="stylesheet">
+		<link href="css/flat-ui.css" rel="stylesheet">
+		<link href="css/default.css" rel="stylesheet">
+		<link href="css/fancybox.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container" id="movieDetail">
+			<h4 id="movieName" class="centered"></h4>
+			<hr/>
+			<div class="row">
+				<div id="movieImage">
+					<img class="img-circle" />
+				</div>
+				<div id="movieDescription">
+					<div class="row">
+						<div class="col-xs-5">
+							<span class="fui-calendar-solid"></span> Pais<br/><span id="movieCountry">Brasil</span>
+						</div>
+						<div class="col-xs-7">
+							<span class="fui-time"></span> <b>Ano</b><br/><span id="movieYear">2013</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-5">
+							<span class="fui-heart"></span> Nota<br/>
+							<span id="movieRate">
+								<span class="fui-heart"></span>
+								<span class="fui-heart"></span>
+								<span class="fui-heart"></span>
+								<span class="fui-heart"></span>
+								<span class="fui-heart"></span>
+							</span>
+						</div>
+						<div class="col-xs-7">
+							<span class="fui-video"></span> Genêro<br/><span id="movieGender">Drama</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-5">
+							<span class="fui-eye"></span> Visualização<br/><span id="movieDate">01/01/2014</span>
+						</div>
+						<div class="col-xs-7">
+							<span class="fui-location"></span> Local de visualização<br/><span id="moviePlace">Cinemark</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<span class="fui-user"></span> Com quem foi visualização<br/><span id="movieFellows">Patricia, Shana</span>
+						</div>
+					</div>
+					<span class="fui-list"></span> Comentários<br/><span id="movieComments">Patricia, Shana</span>
+				</div>
+			</div>
+			<div class="row centered">
+				<a class="btn btn-wide btn-warning" id="btnEdit"><span class="fui-new"></span> Editar filme</a>
+			</div>
+			<br/>
+		</div>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/bootstrap-select.js"></script>
+		<script src="js/jquery.tagsinput.js"></script>
+		<script src="bootstrap/js/google-code-prettify/prettify.js"></script>
+		<script src="js/application.js"></script>
+		<script src="js/movies.js"></script>
+		<script src="js/jslinq.js"></script>
+		<script>
+			$(function($){
+				var id = window.location.search.substring(1);
+				var movie = JSLINQ(movies).
+							Where(function(item){ return item.id == id; }).
+							Select(function(item){ return item }).items[0];
+							
+				$('#movieName').append(movie.name);
+				$('.img-circle').attr("src", "images/movies/"+ movie.image);
+				$('#btnEdit').attr("href", "crud.html?"+ movie.id);
+			});
+		</script>
+	</body>
+</html>
